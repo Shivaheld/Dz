@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Введите размер массива: ";
+    cin >> n;
+
+    // Создание динамического массива
+    int* arr = new int[n];
+
+    // Заполнение массива
+    for (int i = 0; i < n; i++) {
+        arr[i] = i * 2; // Пример заполнения
+    }
+
+    // Вывод массива
+    cout << "Массив: ";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    // Удаление массива
+    delete[] arr;
+    return 0;
+}
